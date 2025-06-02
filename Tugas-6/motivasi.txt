@@ -1,0 +1,4 @@
+Mottivasi saya mengikuti bootcamp ini adalah karena saya ingin mempelajari 
+laravel 12, karena sebelumnya saya hanya bisa menggunakan framework
+codeigniter. Harapan saya, saya paham cara penggunaan laravel 12 dan
+ilmunya bermanfaat untuk saya kedepannya.
