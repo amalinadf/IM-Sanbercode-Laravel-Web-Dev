@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+@extends('layouts.master')
+
+@section('title')
+    Register
+@endsection
+
+@section('content')
     <h1>Buat Akun Baru!</h1>
     <h3>Sign Up Form</h3>
     <form action="/welcomee" method="POST">
@@ -49,5 +48,4 @@
         <textarea name="bio" id="" cols="30" rows="8"></textarea> <br/>
         <input type="submit" name="Sign Up" id="" value="Sign Up">
     </form>
-</body>
-</html>
+@endsection

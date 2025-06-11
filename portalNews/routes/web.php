@@ -15,6 +15,9 @@ Route::post('/welcomee', [FormController::class, 'welcomee']);
 
 
 
+
+
+
 // REGISTER
 // Route::get('/register', function () {
 //     return view('register');
