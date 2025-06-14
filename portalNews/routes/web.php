@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\GenreController;
+use Illuminate\Support\Facades\DB;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -14,26 +16,17 @@ Route::get('/register', [FormController::class, 'register']);
 Route::post('/welcomee', [FormController::class, 'welcomee']);
 
 
-use Illuminate\Support\Facades\DB;
+//CRUD Categories
+Route::get('/genre/create', [GenreController::class, 'create']);
+Route::post('/genre', [GenreController::class, 'store']);
 
+Route::get('/genre', [GenreController::class, 'index']);
+Route::get('/genre/{id}', [GenreController::class, 'show']);
 
-Route::get('/test-db', function () {
-    try {
-        DB::connection()->getPdo();
-        if (Schema::hasTable('users')) {
-            return '✅ Berhasil connect ke database dan tabel users ditemukan!';
-        } else {
-            return '✅ Berhasil connect ke database, tapi tabel users tidak ditemukan!';
-        }
-    } catch (\Exception $e) {
-        return '❌ Gagal connect ke database: ' . $e->getMessage();
-    }
-});
+Route::get('/genre/{id}/edit', [GenreController::class, 'edit']);
+Route::put('/genre/{id}', [GenreController::class, 'update']);
 
-
-
-
-
+Route::delete('/genre/{id}', [GenreController::class, 'destroy']);
 
 
 
